@@ -3,7 +3,9 @@
 # make our folders and links
 mkdir -p /config/nginx
 mkdir -p /config/www/static
+mkdir -p /config/log/nginx/
 mkdir -p /opt/data
+
 
 #copy default configs
 
