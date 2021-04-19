@@ -1,0 +1,26 @@
+#!/usr/bin/with-contenv bash
+
+# make our folders and links
+mkdir -p /config/nginx
+mkdir -p /config/www/static
+mkdir -p /opt/data
+
+#copy default configs
+
+if [ ! -e "/config/ffserver/nginx.conf" ]; then
+  cp -R /defaults/nginx /conf/
+fi
+
+if [ ! -e "/config/www/static/stat.xsl" ]; then
+  cp -R /defaults/www /conf/
+fi
+
+
+# permissions
+chown -R abc:abc /config
+chmod -R 770 /config
+chmod -R +r /config
+
+chown -R abc:abc /opt/data
+chmod -R 770 /opt/data
+chmod -R +r /opt/data
