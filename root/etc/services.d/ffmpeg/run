@@ -6,4 +6,4 @@ if [ -n "${UMASK_SET}" ] && [ -z "${UMASK}" ]; then
 fi
 
 exec \
-	s6-setuidgid abc /usr/local/nginx  -c /config/nginx/nginx.conf
+	s6-setuidgid abc nginx  -c /config/nginx/nginx.conf
