@@ -14,7 +14,7 @@ ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 # install packages
 RUN \
 echo "**** install packages ****" && \
-RUN apk add --no-cache --upgrade \
+apk add --no-cache --upgrade \
 	ffmpeg \
 	fdk-aac-dev \
 	nginx \
