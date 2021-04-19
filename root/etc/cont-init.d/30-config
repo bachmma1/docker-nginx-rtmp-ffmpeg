@@ -9,12 +9,12 @@ mkdir -p /opt/data
 
 #copy default configs
 
-if [ ! -e "/config/ffserver/nginx.conf" ]; then
-  cp -R /defaults/nginx /conf/
+if [ ! -e "/config/nginx/nginx.conf" ]; then
+  cp -R /defaults/nginx /config/
 fi
 
 if [ ! -e "/config/www/static/stat.xsl" ]; then
-  cp -R /defaults/www /conf/
+  cp -R /defaults/www /config/
 fi
 
 
