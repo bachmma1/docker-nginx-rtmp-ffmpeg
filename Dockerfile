@@ -18,7 +18,7 @@ RUN apk add --no-cache --upgrade \
 	ffmpeg \
 	fdk-aac-dev \
 	nginx \
-	nginx-mod-rtmp
+	nginx-mod-rtmp \
 	ca-certificates \
 	gettext \
 	openssl \
