@@ -10,6 +10,7 @@ LABEL maintainer="bachmma1"
 
 # environment settings
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
+ENV FFMPEG_COMMAND=
 
 # install packages
 RUN \
@@ -34,7 +35,9 @@ apk add --no-cache --upgrade \
 	opus \
 	rtmpdump \
 	x264-dev \
-	x265-dev
+	x265-dev && \
+echo "**** configure nginx ****" && \
+rm -f /etc/nginx/conf.d/default.conf
 
 COPY root/ /
 

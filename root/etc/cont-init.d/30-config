@@ -17,6 +17,12 @@ if [ ! -e "/config/www/static/stat.xsl" ]; then
   cp -R /defaults/www /config/
 fi
 
+# logfiles needed by nginx
+[[ ! -f /config/log/nginx/error.log ]] && \
+	touch /config/log/nginx/error.log
+[[ ! -f /config/log/nginx/access.log ]] && \
+	touch /config/log/nginx/access.log
+
 
 # permissions
 chown -R abc:abc /config
