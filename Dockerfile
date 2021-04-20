@@ -10,7 +10,7 @@ LABEL maintainer="bachmma1"
 
 # environment settings
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
-ENV FFMPEG_COMMAND=
+ENV FFMPEG_COMMAND=-h
 
 # install packages
 RUN \
